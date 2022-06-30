@@ -50,7 +50,7 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardReservas"
+            android:id="@+id/cardReservation"
             android:layout_width="190dp"
             android:layout_height="200dp"
             android:layout_margin="5dp"
