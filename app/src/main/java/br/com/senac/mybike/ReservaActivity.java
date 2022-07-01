@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.DatePicker;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -11,6 +12,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class ReservaActivity extends AppCompatActivity {
 
     FloatingActionButton fabReservar;
+    DatePicker dtpReservar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +20,7 @@ public class ReservaActivity extends AppCompatActivity {
         setContentView(R.layout.reserva_layout);
 
         fabReservar = findViewById(R.id.fabReservar);
+        dtpReservar = findViewById(R.id.dtpReservas);
 
         fabReservar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,5 +30,12 @@ public class ReservaActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             }
         });
+
+        int mes = dtpReservar.getMonth();
+        int dia = dtpReservar.getDayOfMonth();
+        int ano = dtpReservar.getYear();
+
+        String montagem = "Você está no" + dia + "/" + mes + "/" + ano;
+
     }
 }
