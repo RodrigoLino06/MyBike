@@ -6,9 +6,13 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
+import java.util.List;
+
 public class CatalogosActivity extends AppCompatActivity {
 
     RecyclerView idRecCatalogo;
+
+    List<Bike> bikes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +29,6 @@ public class CatalogosActivity extends AppCompatActivity {
         idRecCatalogo.hasFixedSize();
 
         //instanciar o adaptador
-
         MyAdapter adapter = new MyAdapter();
 
         //executar a montagem da lista com o modelo
